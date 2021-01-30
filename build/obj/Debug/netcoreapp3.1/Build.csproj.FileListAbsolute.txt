@@ -1,0 +1,17 @@
+D:\gitwork\pkolmakov.github.io\build\bin\Debug\netcoreapp3.1\Build.exe
+D:\gitwork\pkolmakov.github.io\build\bin\Debug\netcoreapp3.1\Build.deps.json
+D:\gitwork\pkolmakov.github.io\build\bin\Debug\netcoreapp3.1\Build.runtimeconfig.json
+D:\gitwork\pkolmakov.github.io\build\bin\Debug\netcoreapp3.1\Build.runtimeconfig.dev.json
+D:\gitwork\pkolmakov.github.io\build\bin\Debug\netcoreapp3.1\Build.dll
+D:\gitwork\pkolmakov.github.io\build\bin\Debug\netcoreapp3.1\Build.pdb
+D:\gitwork\pkolmakov.github.io\build\bin\Debug\netcoreapp3.1\Cake.Common.dll
+D:\gitwork\pkolmakov.github.io\build\bin\Debug\netcoreapp3.1\Cake.Core.dll
+D:\gitwork\pkolmakov.github.io\build\bin\Debug\netcoreapp3.1\Cake.Frosting.dll
+D:\gitwork\pkolmakov.github.io\build\obj\Debug\netcoreapp3.1\Build.csprojAssemblyReference.cache
+D:\gitwork\pkolmakov.github.io\build\obj\Debug\netcoreapp3.1\Build.AssemblyInfoInputs.cache
+D:\gitwork\pkolmakov.github.io\build\obj\Debug\netcoreapp3.1\Build.AssemblyInfo.cs
+D:\gitwork\pkolmakov.github.io\build\obj\Debug\netcoreapp3.1\Build.csproj.CoreCompileInputs.cache
+D:\gitwork\pkolmakov.github.io\build\obj\Debug\netcoreapp3.1\Build.csproj.CopyComplete
+D:\gitwork\pkolmakov.github.io\build\obj\Debug\netcoreapp3.1\Build.dll
+D:\gitwork\pkolmakov.github.io\build\obj\Debug\netcoreapp3.1\Build.pdb
+D:\gitwork\pkolmakov.github.io\build\obj\Debug\netcoreapp3.1\Build.genruntimeconfig.cache
