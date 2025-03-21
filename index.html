@@ -1,1 +1,257 @@
-under cunstruction
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavel Kolmakov - CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .left-block {
+            width: 65%;
+            padding: 30px;
+        }
+        .right-block {
+            width: 35%;
+            padding: 30px;
+            background-color: #f9f9f9;
+            border-left: 2px solid #ddd;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .list {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        .list li {
+            margin-bottom: 8px;
+        }
+        .contact-info p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+#tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tag {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    cursor: default;
+}
+
+.tag[data-level="5"] {
+    font-size: 20px;
+    background-color: #4caf50;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.tag[data-level="4"] {
+    font-size: 18px;
+    background-color: #8bc34a;
+    color: #fff;
+}
+
+.tag[data-level="3"] {
+    font-size: 16px;
+    background-color: #cddc39;
+    color: #333;
+}
+
+.tag[data-level="2"] {
+    font-size: 14px;
+    background-color: #ffc107;
+    color: #333;
+}
+
+.tag[data-level="1"] {
+    font-size: 12px;
+    background-color: #ff5722;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Block (Main Information) -->
+        <div class="left-block">
+            <h1>PAVEL KOLMAKOV</h1>
+            <p><strong>ENTERPRISE SOLUTION ARCHITECT</strong></p>
+                <p></p>
+
+            <div class="section">
+                <h2>SUMMARY</h2>
+                <p>
+                    Experienced and versatile professional with 9 years of expertise in the dotnet stack, adept at collaborating with international teams and working on diverse projects encompassing various frameworks. Demonstrated skills in low-level troubleshooting, with 7 years of experience in effectively resolving critical issues in production environments, contributing to the preservation of a company's reputation. A proactive and highly communicative expert, consistently driven to deliver exceptional results.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>TECHNOLOGY & TOOLS</h2>
+                <p>
+        <div id="tagContainer">
+            <div class="tag" data-level="5">Vim</div>
+            <div class="tag" data-level="5">JetBrains IDEs</div>
+            <div class="tag" data-level="4">VS Code</div>
+            <div class="tag" data-level="2">PHP</div>
+            <div class="tag" data-level="5">C#</div>
+            <div class="tag" data-level="3">typescript</div>
+            <div class="tag" data-level="3">Angular</div>
+            <div class="tag" data-level="3">SQL</div>
+            <div class="tag" data-level="4">WPF</div>
+            <div class="tag" data-level="5">Perfview</div>
+            <div class="tag" data-level="5">Windbg</div>
+            <div class="tag" data-level="5">VMMAP</div>
+            <div class="tag" data-level="5">GIT</div>
+            <div class="tag" data-level="4">K8s</div>
+            <div class="tag" data-level="4">Docker</div>
+            <div class="tag" data-level="4">Jira</div>
+            <div class="tag" data-level="4">C4</div>
+            <div class="tag" data-level="5">Figma</div>
+            <div class="tag" data-level="4">REST</div>
+        </div>
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>WORK EXPERIENCE</h2>
+
+                <h3>ENTERPRISE SOLUTION ARCHITECT, ONEINC</h3>
+                <p>August 2024 - April 2025</p>
+                <ul class="list">
+                    <li>Designed a reliable mail delivery service</li>
+                    <li>Enchanced product quality by identifying and resolving mismatches between business requirements and implementation</li>
+                    <li>Collaborated with development teams to design solutions that aligned with business goals</li>
+                </ul>
+
+                <h3>STAFF ENGINEER, ONEINC</h3>
+                <p>June 2022 - August 2024</p>
+                <ul class="list">
+                    <li>Dockerized a legacy application stack, improving deployment efficiency for the team</li>
+                    <li>Performed reverse-engineering analysis of undocumented legacy applications and proposed optimized technical solutions</li>
+                    <li>Configured CI/CD pipelines and deployed projects in Kubernetes (k8s)</li>
+                    <li>Analyzed and optimized blocking SQL queries in production, improving application performance</li>
+                    <li>Led a development team, ensuring timely delivery of project milestones</li>
+                </ul>
+
+
+                <h3>LEAD SOFTWARE ENGINEER, EDINYE SYSTEMY</h3>
+                <p>July 2016 — 2022</p>
+                <ul class="list">
+                    <li>Provided expertise in low-level debugging for the company</li>
+                    <li>Acted as OKR ambassador in 2019</li>
+                    <li>Recipient of the "Employer of the Year" award in 2018</li>
+                    <li>Developed and maintained company's software</li>
+                </ul>
+
+                <h3>MIDDLE SOFTWARE ENGINEER, ROSINTEGRATION</h3>
+                <p>October 2015 — July 2016</p>
+                <ul class="list">
+                    <li>Collected business requirements for new applications</li>
+                    <li>Participated in the development and support of software</li>
+                </ul>
+
+                <h3>JUNIOR SOFTWARE ENGINEER, NIPPI INJGEO</h3>
+                <p>December 2013 — October 2015</p>
+                <ul class="list">
+                    <li>Started software developer journey by developing and
+                            supporting plugins for AutoCAD</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>EDUCATION</h2>
+                <h3>BACHELOR OF AUTOMATED SYSTEMS IN ECONOMICS</h3>
+                <p>Kuban State Technological University — 2001-2006</p>
+            </div>
+        </div>
+
+        <!-- Right Block (Address, Skills, Languages, and Speaking Engagements) -->
+        <div class="right-block">
+            <div class="section contact-info">
+                <h3>Contact Information</h3>
+                <p>250 McAdoo Drive, Folsom, CA, 95630, USA</p>
+                <p>Email: <a href="mailto:pteplyakov83@gmail.com">pteplyakov83@gmail.com</a></p>
+                <p>Phone: +1 (279) 732-67-82</p>
+                <p>Phone: +7 (906) 187-49-88</p>
+            </div>
+
+            <div class="section">
+                <h3>Skills</h3>
+                <ul class="list">
+                    <li>IDesign</li>
+                    <li>DDD</li>
+                    <li>OKR</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Languages</h3>
+                <ul class="list">
+                    <li>Russian - Native</li>
+                    <li>English - Advanced: Speaking, Reading</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Speaking Engagements</h3>
+                <ul class="list">
+                    <li><a href="https://www.youtube.com/watch?v=OyfGRgUaVz4" target="_blank">Windbg</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=B30dw1BtHJk" target="_blank">Memory Leaks</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=0RNLAxOaPpM" target="_blank">Debugging Tools</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=jo3FBgK8dUs" target="_blank">Contract-Oriented Development</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=22jtgAXgdh8" target="_blank">Design Patterns</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
