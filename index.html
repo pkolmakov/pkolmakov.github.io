@@ -65,150 +65,209 @@
             text-decoration: underline;
         }
 
+        /* Language Switch Styles */
+        .language-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 5px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .language-btn {
+            border: none;
+            padding: 8px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        .language-btn.active {
+            background: #007BFF;
+            color: white;
+        }
 
-#tagContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
-}
+        #tagContainer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
 
-.tag {
-    background-color: #e0e0e0;
-    color: #333;
-    padding: 6px 12px;
-    border-radius: 16px;
-    font-size: 14px;
-    display: inline-flex;
-    align-items: center;
-    cursor: default;
-}
+        .tag {
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            cursor: default;
+        }
 
-.tag[data-level="5"] {
-    font-size: 20px;
-    background-color: #4caf50;
-    color: #fff;
-    transform: scale(1.1);
-}
+        .tag[data-level="5"] {
+            font-size: 20px;
+            background-color: #4caf50;
+            color: #fff;
+            transform: scale(1.1);
+        }
 
-.tag[data-level="4"] {
-    font-size: 18px;
-    background-color: #8bc34a;
-    color: #fff;
-}
+        .tag[data-level="4"] {
+            font-size: 18px;
+            background-color: #8bc34a;
+            color: #fff;
+        }
 
-.tag[data-level="3"] {
-    font-size: 16px;
-    background-color: #cddc39;
-    color: #333;
-}
+        .tag[data-level="3"] {
+            font-size: 16px;
+            background-color: #cddc39;
+            color: #333;
+        }
 
-.tag[data-level="2"] {
-    font-size: 14px;
-    background-color: #ffc107;
-    color: #333;
-}
+        .tag[data-level="2"] {
+            font-size: 14px;
+            background-color: #ffc107;
+            color: #333;
+        }
 
-.tag[data-level="1"] {
-    font-size: 12px;
-    background-color: #ff5722;
-    color: #fff;
-}
-
+        .tag[data-level="1"] {
+            font-size: 12px;
+            background-color: #ff5722;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
+    <!-- Language Switch Button -->
+    <div class="language-switch">
+        <button class="language-btn active" id="ru-btn">RU</button>
+        <button class="language-btn" id="en-btn">ENG</button>
+    </div>
 
     <div class="container">
         <!-- Left Block (Main Information) -->
         <div class="left-block">
-            <h1>PAVEL KOLMAKOV</h1>
-            <p><strong>ENTERPRISE SOLUTION ARCHITECT</strong></p>
-                <p></p>
+            <h1 data-lang="ru">ПАВЕЛ КОЛМАКОВ</h1>
+            <h1 data-lang="en" style="display:none">PAVEL KOLMAKOV</h1>
+            <p><strong data-lang="ru">АРХИТЕКТОР КОРПОРАТИВНЫХ РЕШЕНИЙ</strong></p>
+            <p><strong data-lang="en" style="display:none">ENTERPRISE SOLUTION ARCHITECT</strong></p>
+            <p></p>
 
             <div class="section">
-                <h2>SUMMARY</h2>
-                <p>
+                <h2 data-lang="ru">ОБО МНЕ</h2>
+                <h2 data-lang="en" style="display:none">SUMMARY</h2>
+                <p data-lang="ru">
+                    Опытный и разносторонний специалист с 9-летним опытом работы с технологиями .NET, умеющий эффективно сотрудничать с международными командами и работать над разнообразными проектами, использующими различные фреймворки. Обладаю навыками низкоуровневой отладки с 7-летним опытом успешного решения критических проблем в производственных средах, что способствовало сохранению репутации компании. Активный и коммуникабельный эксперт, всегда стремящийся к достижению выдающихся результатов.
+                </p>
+                <p data-lang="en" style="display:none">
                     Experienced and versatile professional with 9 years of expertise in the dotnet stack, adept at collaborating with international teams and working on diverse projects encompassing various frameworks. Demonstrated skills in low-level troubleshooting, with 7 years of experience in effectively resolving critical issues in production environments, contributing to the preservation of a company's reputation. A proactive and highly communicative expert, consistently driven to deliver exceptional results.
                 </p>
             </div>
 
             <div class="section">
-                <h2>TECHNOLOGY & TOOLS</h2>
-                <p>
-        <div id="tagContainer">
-            <div class="tag" data-level="5">Vim</div>
-            <div class="tag" data-level="5">JetBrains IDEs</div>
-            <div class="tag" data-level="4">VS Code</div>
-            <div class="tag" data-level="2">PHP</div>
-            <div class="tag" data-level="5">C#</div>
-            <div class="tag" data-level="3">typescript</div>
-            <div class="tag" data-level="3">Angular</div>
-            <div class="tag" data-level="3">SQL</div>
-            <div class="tag" data-level="4">WPF</div>
-            <div class="tag" data-level="5">Perfview</div>
-            <div class="tag" data-level="5">Windbg</div>
-            <div class="tag" data-level="5">VMMAP</div>
-            <div class="tag" data-level="5">GIT</div>
-            <div class="tag" data-level="4">K8s</div>
-            <div class="tag" data-level="4">Docker</div>
-            <div class="tag" data-level="4">Jira</div>
-            <div class="tag" data-level="4">C4</div>
-            <div class="tag" data-level="5">Figma</div>
-            <div class="tag" data-level="4">REST</div>
-        </div>
-                </p>
+                <h2 data-lang="ru">ТЕХНОЛОГИИ И ИНСТРУМЕНТЫ</h2>
+                <h2 data-lang="en" style="display:none">TECHNOLOGY & TOOLS</h2>
+                <div id="tagContainer">
+                    <div class="tag" data-level="5">Vim</div>
+                    <div class="tag" data-level="5">JetBrains IDEs</div>
+                    <div class="tag" data-level="4">VS Code</div>
+                    <div class="tag" data-level="2">PHP</div>
+                    <div class="tag" data-level="5">C#</div>
+                    <div class="tag" data-level="3">typescript</div>
+                    <div class="tag" data-level="3">Angular</div>
+                    <div class="tag" data-level="3">SQL</div>
+                    <div class="tag" data-level="4">WPF</div>
+                    <div class="tag" data-level="5">Perfview</div>
+                    <div class="tag" data-level="5">Windbg</div>
+                    <div class="tag" data-level="5">VMMAP</div>
+                    <div class="tag" data-level="5">GIT</div>
+                    <div class="tag" data-level="4">K8s</div>
+                    <div class="tag" data-level="4">Docker</div>
+                    <div class="tag" data-level="4">Jira</div>
+                    <div class="tag" data-level="4">C4</div>
+                    <div class="tag" data-level="5">Figma</div>
+                    <div class="tag" data-level="4">REST</div>
+                </div>
             </div>
 
             <div class="section">
-                <h2>WORK EXPERIENCE</h2>
+                <h2 data-lang="ru">ОПЫТ РАБОТЫ</h2>
+                <h2 data-lang="en" style="display:none">WORK EXPERIENCE</h2>
 
-                <h3>ENTERPRISE SOLUTION ARCHITECT, ONEINC</h3>
+                <h3 data-lang="ru">АРХИТЕКТОР КОРПОРАТИВНЫХ РЕШЕНИЙ, ONEINC</h3>
+                <h3 data-lang="en" style="display:none">ENTERPRISE SOLUTION ARCHITECT, ONEINC</h3>
                 <p>August 2024 - April 2025</p>
                 <ul class="list">
-                    <li>Designed a reliable mail delivery service</li>
-                    <li>Enchanced product quality by identifying and resolving mismatches between business requirements and implementation</li>
-                    <li>Collaborated with development teams to design solutions that aligned with business goals</li>
+                    <li data-lang="ru">Разработал надежную службу доставки почты</li>
+                    <li data-lang="ru">Повысил качество продукта, выявляя и устраняя несоответствия между бизнес-требованиями и реализацией</li>
+                    <li data-lang="ru">Сотрудничал с командами разработчиков для проектирования решений, соответствующих бизнес-целям</li>
+                    
+                    <li data-lang="en" style="display:none">Designed a reliable mail delivery service</li>
+                    <li data-lang="en" style="display:none">Enchanced product quality by identifying and resolving mismatches between business requirements and implementation</li>
+                    <li data-lang="en" style="display:none">Collaborated with development teams to design solutions that aligned with business goals</li>
                 </ul>
 
-                <h3>STAFF ENGINEER, ONEINC</h3>
+                <h3 data-lang="ru">СТАРШИЙ ИНЖЕНЕР, ONEINC</h3>
+                <h3 data-lang="en" style="display:none">STAFF ENGINEER, ONEINC</h3>
                 <p>June 2022 - August 2024</p>
                 <ul class="list">
-                    <li>Dockerized a legacy application stack, improving deployment efficiency for the team</li>
-                    <li>Performed reverse-engineering analysis of undocumented legacy applications and proposed optimized technical solutions</li>
-                    <li>Configured CI/CD pipelines and deployed projects in Kubernetes (k8s)</li>
-                    <li>Analyzed and optimized blocking SQL queries in production, improving application performance</li>
-                    <li>Led a development team, ensuring timely delivery of project milestones</li>
+                    <li data-lang="ru">Докеризировал стек устаревших приложений, повысив эффективность развертывания для команды</li>
+                    <li data-lang="ru">Провел анализ реверс-инжиниринга недокументированных устаревших приложений и предложил оптимизированные технические решения</li>
+                    <li data-lang="ru">Настроил CI/CD конвейеры и развернул проекты в Kubernetes (k8s)</li>
+                    <li data-lang="ru">Проанализировал и оптимизировал блокирующие SQL-запросы в производственной среде, улучшив производительность приложений</li>
+                    <li data-lang="ru">Руководил командой разработчиков, обеспечивая своевременное выполнение этапов проекта</li>
+                    
+                    <li data-lang="en" style="display:none">Dockerized a legacy application stack, improving deployment efficiency for the team</li>
+                    <li data-lang="en" style="display:none">Performed reverse-engineering analysis of undocumented legacy applications and proposed optimized technical solutions</li>
+                    <li data-lang="en" style="display:none">Configured CI/CD pipelines and deployed projects in Kubernetes (k8s)</li>
+                    <li data-lang="en" style="display:none">Analyzed and optimized blocking SQL queries in production, improving application performance</li>
+                    <li data-lang="en" style="display:none">Led a development team, ensuring timely delivery of project milestones</li>
                 </ul>
 
-
-                <h3>LEAD SOFTWARE ENGINEER, EDINYE SYSTEMY</h3>
+                <h3 data-lang="ru">ВЕДУЩИЙ РАЗРАБОТЧИК, ЕДИНЫЕ СИСТЕМЫ</h3>
+                <h3 data-lang="en" style="display:none">LEAD SOFTWARE ENGINEER, EDINYE SYSTEMY</h3>
                 <p>July 2016 — 2022</p>
                 <ul class="list">
-                    <li>Provided expertise in low-level debugging for the company</li>
-                    <li>Acted as OKR ambassador in 2019</li>
-                    <li>Recipient of the "Employer of the Year" award in 2018</li>
-                    <li>Developed and maintained company's software</li>
+                    <li data-lang="ru">Обеспечивал экспертизу в области низкоуровневой отладки для компании</li>
+                    <li data-lang="ru">Выступал в роли посла OKR в 2019 году</li>
+                    <li data-lang="ru">Получил награду "Работодатель года" в 2018 году</li>
+                    <li data-lang="ru">Разрабатывал и поддерживал программное обеспечение компании</li>
+                    
+                    <li data-lang="en" style="display:none">Provided expertise in low-level debugging for the company</li>
+                    <li data-lang="en" style="display:none">Acted as OKR ambassador in 2019</li>
+                    <li data-lang="en" style="display:none">Recipient of the "Employer of the Year" award in 2018</li>
+                    <li data-lang="en" style="display:none">Developed and maintained company's software</li>
                 </ul>
 
-                <h3>MIDDLE SOFTWARE ENGINEER, ROSINTEGRATION</h3>
+                <h3 data-lang="ru">СРЕДНИЙ РАЗРАБОТЧИК, РОСИНТЕГРАЦИЯ</h3>
+                <h3 data-lang="en" style="display:none">MIDDLE SOFTWARE ENGINEER, ROSINTEGRATION</h3>
                 <p>October 2015 — July 2016</p>
                 <ul class="list">
-                    <li>Collected business requirements for new applications</li>
-                    <li>Participated in the development and support of software</li>
+                    <li data-lang="ru">Собирал бизнес-требования для новых приложений</li>
+                    <li data-lang="ru">Участвовал в разработке и поддержке программного обеспечения</li>
+                    
+                    <li data-lang="en" style="display:none">Collected business requirements for new applications</li>
+                    <li data-lang="en" style="display:none">Participated in the development and support of software</li>
                 </ul>
 
-                <h3>JUNIOR SOFTWARE ENGINEER, NIPPI INJGEO</h3>
+                <h3 data-lang="ru">МЛАДШИЙ РАЗРАБОТЧИК, НИППИ ИНЖГЕО</h3>
+                <h3 data-lang="en" style="display:none">JUNIOR SOFTWARE ENGINEER, NIPPI INJGEO</h3>
                 <p>December 2013 — October 2015</p>
                 <ul class="list">
-                    <li>Started software developer journey by developing and
-                            supporting plugins for AutoCAD</li>
+                    <li data-lang="ru">Начал карьеру разработчика, создавая и поддерживая плагины для AutoCAD</li>
+                    
+                    <li data-lang="en" style="display:none">Started software developer journey by developing and supporting plugins for AutoCAD</li>
                 </ul>
             </div>
 
             <div class="section">
-                <h2>EDUCATION</h2>
-                <h3>BACHELOR OF AUTOMATED SYSTEMS IN ECONOMICS</h3>
+                <h2 data-lang="ru">ОБРАЗОВАНИЕ</h2>
+                <h2 data-lang="en" style="display:none">EDUCATION</h2>
+                <h3 data-lang="ru">БАКАЛАВР АВТОМАТИЗИРОВАННЫХ СИСТЕМ В ЭКОНОМИКЕ</h3>
+                <h3 data-lang="en" style="display:none">BACHELOR OF AUTOMATED SYSTEMS IN ECONOMICS</h3>
                 <p>Kuban State Technological University — 2001-2006</p>
             </div>
         </div>
@@ -216,15 +275,16 @@
         <!-- Right Block (Address, Skills, Languages, and Speaking Engagements) -->
         <div class="right-block">
             <div class="section contact-info">
-                <h3>Contact Information</h3>
+                <h3 data-lang="ru">Контактная информация</h3>
+                <h3 data-lang="en" style="display:none">Contact Information</h3>
                 <p>Krasnodar, Russia</p>
                 <p>Email: <a href="mailto:pteplyakov83@gmail.com">pteplyakov83@gmail.com</a></p>
-                <p>Phone: +1 (279) 732-67-82</p>
                 <p>Phone: +7 (906) 187-49-88</p>
             </div>
 
             <div class="section">
-                <h3>Skills</h3>
+                <h3 data-lang="ru">Навыки</h3>
+                <h3 data-lang="en" style="display:none">Skills</h3>
                 <ul class="list">
                     <li>IDesign</li>
                     <li>DDD</li>
@@ -233,15 +293,19 @@
             </div>
 
             <div class="section">
-                <h3>Languages</h3>
+                <h3 data-lang="ru">Языки</h3>
+                <h3 data-lang="en" style="display:none">Languages</h3>
                 <ul class="list">
-                    <li>Russian - Native</li>
-                    <li>English - Advanced: Speaking, Reading</li>
+                    <li data-lang="ru">Русский - Родной</li>
+                    <li data-lang="en" style="display:none">Russian - Native</li>
+                    <li data-lang="ru">Английский - Продвинутый: Разговорный, Чтение</li>
+                    <li data-lang="en" style="display:none">English - Advanced: Speaking, Reading</li>
                 </ul>
             </div>
 
             <div class="section">
-                <h3>Speaking Engagements</h3>
+                <h3 data-lang="ru">Публичные выступления</h3>
+                <h3 data-lang="en" style="display:none">Speaking Engagements</h3>
                 <ul class="list">
                     <li><a href="https://www.youtube.com/watch?v=OyfGRgUaVz4" target="_blank">Windbg</a></li>
                     <li><a href="https://www.youtube.com/watch?v=B30dw1BtHJk" target="_blank">Memory Leaks</a></li>
@@ -253,5 +317,45 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ruBtn = document.getElementById('ru-btn');
+            const enBtn = document.getElementById('en-btn');
+            
+            // Set Russian as default
+            switchLanguage('ru');
+            
+            ruBtn.addEventListener('click', function() {
+                switchLanguage('ru');
+                ruBtn.classList.add('active');
+                enBtn.classList.remove('active');
+            });
+            
+            enBtn.addEventListener('click', function() {
+                switchLanguage('en');
+                enBtn.classList.add('active');
+                ruBtn.classList.remove('active');
+            });
+            
+            function switchLanguage(lang) {
+                // Hide all elements for all languages
+                document.querySelectorAll('[data-lang]').forEach(el => {
+                    el.style.display = 'none';
+                });
+                
+                // Show elements for selected language
+                document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+                    el.style.display = '';
+                });
+                
+                // Special handling for elements that don't have data-lang attribute
+                if (lang === 'ru') {
+                    // You can add any special handling for Russian here
+                } else {
+                    // You can add any special handling for English here
+                }
+            }
+        });
+    </script>
 </body>
 </html>
